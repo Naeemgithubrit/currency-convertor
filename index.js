@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import chalk from "chalk";
 import inquirer from "inquirer";
-console.log(chalk.bgGreenBright("\t\nWelcime to my Currency converter project\n\t"));
+console.log(chalk.underline.green("\t\nWelcome to my Currency converter project\n\t"));
 let exchange_rates = {
     "USD": 1,
     "PKR": 280,
@@ -35,7 +35,6 @@ let user_answer = await inquirer.prompt([
 let from_amount = exchange_rates[user_answer.from_currency];
 let to_amount = exchange_rates[user_answer.to_currency];
 let amount = user_answer.amount;
-console.log(`\n`);
 // formula of currency conversion
 let base_amount = amount / from_amount;
 let converted_amount = base_amount * to_amount;

@@ -2,7 +2,7 @@
 import chalk from "chalk";
 import inquirer from "inquirer";
 
-console.log(chalk.bgGreenBright("\t\nWelcime to my Currency converter project\n\t"))
+console.log(chalk.underline.green("\t\nWelcome to my Currency converter project\n\t"))
 
 let exchange_rates:any = {
     "USD":1,  // Based currency
@@ -35,12 +35,10 @@ let user_answer:any = await inquirer.prompt([
     }
 
 ]);
+
 let from_amount = exchange_rates[user_answer.from_currency];
 let to_amount = exchange_rates[user_answer.to_currency];
 let amount = user_answer.amount;
-
-console.log(`\n`);
-
 
 // formula of currency conversion
 let base_amount = amount / from_amount;
