@@ -39,3 +39,4 @@ let amount = user_answer.amount;
 let base_amount = amount / from_amount;
 let converted_amount = base_amount * to_amount;
 console.log(`Converted amount is ${chalk.green(converted_amount.toFixed(2))}`);
+console.log(chalk.underline.green("\t\nThank you for using my Currency converter project\n\t"));
